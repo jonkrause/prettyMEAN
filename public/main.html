@@ -1,0 +1,19 @@
+<div id="main" ng-controller="mainCtrl">
+
+    <div class="textForm">
+        <form ng-submit="post()" ng-show="authenticated">
+            <textarea required maxlength="200" rows="3" placeholder="Say Something" ng-model="newPost.text"></textarea>
+            <input class="button" type="submit" value="Send">
+        </form>
+    </div>
+    
+    <div id="post-stream">
+<!--        <h4>Posts</h4>-->
+        <div class="post" ng-repeat="post in posts | orderBy: 'created_at':true" ng-class-odd="'odd'" ng-class-even="'even'">
+            <p><a href="#!/profile" ng-click="goToProfile(post.created_by)">@{{ post.created_by }}</a></p>
+            <p class="postText">{{ post.text }}</p>
+            <p class="dateStamp">{{ post.created_at | date:"MMM d, y '|' h:mma"}}</p>
+            <p><a ng-click="delete(post)" ng-show="currentUser == post.created_by">delete</a></p>
+        </div>
+    </div>
+</div>

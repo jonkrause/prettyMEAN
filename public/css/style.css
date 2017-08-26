@@ -1,0 +1,172 @@
+/*
+body {
+    background-color: #e6af4b;
+}
+*/
+
+.grid {
+    display: grid;
+/*
+    background-color: #fff;
+    border-radius: 10px;
+*/
+    grid-gap: 0px;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: .05fr .05fr .05fr .05fr;
+    grid-template-areas:
+        "title"
+        "nav"
+        "view"
+        "footer"
+}
+
+
+.title {
+    grid-area: title;
+    font-family: 'Josefin Slab', serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pretty {
+    font-size: 18px;
+    margin-bottom: -25px;
+
+}
+
+.subTitle {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: -15px;
+}
+
+.navGrid {
+    grid-area: nav;
+/*    background-color: salmon;*/
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    display: inline;
+    line-height: 1px;
+
+
+}
+
+.loggedIn {
+    display: inline;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fa7c92;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+}
+
+.textForm {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.button {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    height: 30px;
+    border: none;
+    background-color: #6ec4db;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 2px;
+    
+}
+
+.view {
+    grid-area: view;
+/*    margin-top: -30px;*/
+}
+
+.odd {
+    background-color: #edefef;
+}
+
+.even {
+    background-color: #fff7c0;
+}
+
+#post-stream {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+.post {
+    margin-bottom: 10px;
+    line-height: 22px;
+    padding: 7px;
+    text-align: center;
+}
+
+.postText {
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+.dateStamp {
+    font-size: 11px;
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: aquamarine;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.form-auth {
+    text-align: center;
+
+}
+
+.form-control {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 1px solid #999;
+    height: 30px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 75%;
+    text-align: center;
+    padding: 5px;
+
+}
+
+.logSign {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: #66ab8c;
+    
+}
+
+.proTitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+}

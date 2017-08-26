@@ -1,0 +1,9 @@
+<div ng-controller="authCtrl" id="main" class="container">
+    <form class="form-auth" ng-submit="register()">
+        <div class="logSign"><p>Register an account</p></div>
+        <p class="text-warning">{{ errorMessage }}</p>
+        <input type="username" ng-model="user.username" placeholder="Username" class="form-control">
+        <input type="password" ng-model="user.password" placeholder="Password" class="form-control">
+        <input type="submit" value="Register" class="button">
+    </form>
+</div>

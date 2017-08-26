@@ -1,0 +1,45 @@
+<html lang="en" ng-app="chirpApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>prettyMean</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Lato:300');
+
+    </style>
+</head>
+
+<body ng-controller="authCtrl">
+
+    <div class="grid">
+        <div class="title">
+           <div class="pretty">(pretty)</div>
+            <h1><a href="#">MEAN</a></h1>
+            <div class="subTitle">
+                <h3>A simple message-posting app using a MEAN stack</h3>
+            </div>
+            <hr>
+        </div>
+        <div class="navGrid">
+            <div ng-hide="authenticated"><a href="#!/login" ng-hide="authenticated">Login</a>
+                <a href="#!/register">Sign Up</a></div>
+            <div class="loggedIn">
+                <p ng-show="authenticated">Welcome back {{currentUser}}</p></div>
+
+            <p ng-show="authenticated"><a href="#" ng-click="signout()">Logout</a></p>
+        </div>
+
+<div class="view">
+    <ng-view></ng-view>
+    </div>
+<!--    <div class="footer">footer</div>-->
+    </div>
+
+    <script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.4/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.6.4/angular-resource.min.js"></script>
+    <script src="js/chirpApp.js"></script>
+</body>
+
+</html>
