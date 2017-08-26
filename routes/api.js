@@ -4,9 +4,6 @@ var mongoose = require('mongoose');
 var Post = mongoose.model('Post');
 //Used for routes that must be authenticated.
 function isAuthenticated(req, res, next) {
-    // if user is authenticated in the session, call the next() to call the next request handler 
-    // Passport adds this method to request object. A middleware is allowed to add properties to
-    // request and response objects
 
     //allow all get request methods
     if (req.method === "GET") {
@@ -16,11 +13,11 @@ function isAuthenticated(req, res, next) {
         return next();
     }
 
-    // if the user is not authenticated then redirect him to the login page
+    // if the user is not authenticated then redirect to the login page
     return res.redirect('/#login');
 };
 
-//Register the authentication middleware
+//register the authentication middleware
 router.use('/posts', isAuthenticated);
 
 router.route('/posts')
@@ -49,7 +46,7 @@ router.route('/posts')
         });
     });
 
-//post-specific commands. likely won't be used
+//post-specific commands
 router.route('/posts/:id')
     //gets specified post
     .get(function (req, res) {
